@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="dang_ky.css">
+  <link rel="icon" href="Logo.png">
+  <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="phan1">
+    <article>
+      <header class="navbar">
+        <div>
+          <a href="Home.html"><img loading="lazy" class="logo" src="Logo.png" alt="Logo"></a>
+        </div>
+        <div>
+          <label for="navMobileInput" class="hamburger" onclick="toggleMenu()">
+            <i id="ggg" class="fa-solid fa-bars"></i>
+          </label>
+          <nav>
+            <ul class="nav-links" id="navLinks">
+              <li class="textNav"><a href="Home.html">Trang Chủ</a></li>
+              <li>
+                <div class="textNav" id="lalala"><a href="#" id="sanPham" onclick="toggledropdown()">Sản Phẩm</a>
+                </div>
+                <ul class="dropdown" id="dropdown">
+                  <li><a href="#">Teddy Bear</a></li>
+                  <li><a href="#">Capybara</a></li>
+                  <li><a href="#">Labubu</a></li>
+                </ul>
+              </li>
+              <div class="camNang">
+                <li class="textNav" id="camNang"><a href="#" id="lh">Cẩm nang</a></li>
+              </div>
+              <div>
+                <i id="userLogo" class="fa-solid fa-user-large"></i>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </article>
+  </section>
+  <section class="phan2">
+    <article>
+      <div class="banner">
+        <img loading="lazy" src="aaaaaaaaaa.PNG" alt="banner_1">
+      </div>
+    </article>
+  </section>
+  <section class="phan3">
+    <article>
+      <h2>ĐĂNG KÝ</h2>
+      <div class="login-container">
+        
+        <form onsubmit="handleLogin(event)">
+          <div class="input-group">
+            <label for="name">Họ Và Tên</label>
+            <input  type="text" id="name" name="name" required >
+          </div>
+          <div class="input-group">
+            <label for="password">Mật Khẩu</label>
+            <input type="password" id="password" name="password" required >
+          </div>
+          <div class="input-group">
+            <label for="password">Email</label>
+            <input type="password" id="password" name="password" required >
+          </div>
+          <div class="input-group">
+            <label for="password">Số Điện Thoại</label>
+            <input type="password" id="password" name="password" required >
+          </div>
+          <div class="input-group">
+            <label for="password">Địa Chỉ</label>
+            <input type="password" id="password" name="password" required >
+          </div>
+          <button style="font-weight: bold;" type="submit" class="login-btn">ĐĂNG KÝ</button>
+        </form>
+        <div class="register-link">
+          Bạn đã có tài khoản? <a href="#">Đăng Nhập</a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script>
+    // Hàm để ẩn/hiện menu khi nhấn vào nút Hamburger
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+    function handleLogin(event) {
+      event.preventDefault();
+      alert("Đăng ký thành công");
+      window.location.href = "/"; // Thay / để chuyển vào trang chủ
+    }
+  </script>
+</body>
+
+</html>
